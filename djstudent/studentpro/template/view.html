@@ -1,0 +1,77 @@
+
+<!-- <head>
+    <title>student detail</title>
+</head>
+<body bgcolor="cyan">
+    
+   <h1>STUDENT INFORMATION :</h1>
+   ............................................<br>        
+   Student Name : {{n}}<br>
+   Student Department: {{d}}<br>
+   Student Mobile: {{m}}<br>
+   Student Mail_id: {{e}}<br>
+   Mark1: {{m1}}<br>
+   Mark2 : {{m2}}<br>
+   Mark3 : {{m3}}<br>
+   Mark4 : {{m4}}<br>
+   Total marks :  {{t}}<br>
+............................................    
+</body> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: cyan;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            text-align: left;
+            max-width: 400px;
+            width: 100%;
+        }
+        h1 {
+            color: darkblue;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .info {
+            margin: 10px 0;
+        }
+        .info span {
+            font-weight: bold;
+        }
+        .divider {
+            text-align: center;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>STUDENT INFORMATION :</h1>
+        <div class="divider">............................................</div>
+        <div class="info">Student Name: <span>{{n}}</span></div>
+        <div class="info">Student Department: <span>{{d}}</span></div>
+        <div class="info">Student Mobile: <span>{{m}}</span></div>
+        <div class="info">Student Mail_id: <span>{{e}}</span></div>
+        <div class="info">Mark1: <span>{{m1}}</span></div>
+        <div class="info">Mark2: <span>{{m2}}</span></div>
+        <div class="info">Mark3: <span>{{m3}}</span></div>
+        <div class="info">Mark4: <span>{{m4}}</span></div>
+        <div class="info">Total marks: <span>{{t}}</span></div>
+        <div class="divider">............................................</div>
+    </div>
+</body>
+</html>

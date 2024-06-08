@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: cyan;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            color: darkblue;
+            text-align: center;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 300px;
+        }
+        input[type="text"],
+        input[type="number"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: darkblue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: navy;
+        }
+        h3 {
+            color: red;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body bgcolor="cyan">
+    <h1>ADD STUDENT DETAIL</h1>
+    <form action="/st/" method="post">
+        {% csrf_token %}
+        ENTER STUDENT NAME:<input type="text" name="sn"><br><br>
+        ENTER STUDENT DEPT:<input type="text" name="sd"><br><br>
+        ENTER STUDENT AGE:<input type="number" name="sa"><br><br>
+        ENTER STUDENT MOBILE NUMBER :<input type="number" name="sm"> <br><br>
+        ENTER STUDENT EMAIL:<input type="text" name="se"><br><br>
+        <input type="submit" value="add">
+        <h3>{{r}}</h3>
+    </form>
+</body>

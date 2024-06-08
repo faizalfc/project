@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>web creation</title>
+    </head>
+    <body>
+        <h1 style="background-color:blue;color: white;text-align: center;">
+            FORM REGISTER
+        </h1>
+        <form action="/gi/" method="post">
+            {%csrf_token%}
+            {{ad.as_p}}
+     
+            <input type="submit" value="login">
+            <h1> {{r}}</h1>
+        </form>
+    </body>
+</html>

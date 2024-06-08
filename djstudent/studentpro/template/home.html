@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 30px;
+            color: #333;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        form {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form input[type="submit"] {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        #sm {
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>STUDENT INFORMATION</h1><br><br>
+    <h2>CRUD</h2>
+    <form id="a" action="/s/" method="post">
+        {% csrf_token %}
+        <input type="submit" value="ADD">
+    </form>
+    <form id="b" action="/u/" method="post">
+        {% csrf_token %}
+        <input type="submit" value="UPDATE">
+    </form>
+    <form id="c" action="/d/" method="post">
+        {% csrf_token %}
+        <input type="submit" value="DELETE">
+    </form>
+    <h1 id="sm">STUDENT MARKS INFORMATION</h1>
+    <form id="d" action="/sd/" method="post">
+        {% csrf_token %}
+        <input type="submit" value="ADDMARKS">
+    </form>
+    <form id="e" action="/sdu/" method="post">
+        {% csrf_token %}
+        <input type="submit" value="UPDATEMARKS">
+    </form>
+    <form id="f" action="/dm/" method="post">
+        {% csrf_token %}
+        <input type="submit" value="DELETEMARKS">
+    </form>
+    <form id="g" action="/ser/" method="post">
+        {% csrf_token %}
+        <input type="submit" value="SEARCH">
+    </form>
+</body>

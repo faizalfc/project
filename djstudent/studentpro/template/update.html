@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: cyan;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            color: darkblue;
+            margin-bottom: 30px;
+            text-align: center;
+            text-shadow: 1px 1px 2px #000;
+        }
+        form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            text-align: left;
+        }
+        input[type="text"],
+        input[type="number"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #4b0082;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            background-color: #4b0082;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #551a8b;
+        }
+        h3 {
+            color: red;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body bgcolor="cyan">
+    <h1>UPDATE STUDENT DETAIL</h1>
+    <form action="/up/" method="post">
+        {% csrf_token %}
+        ENTER STUDENT NAME:<input type="text" name="sn"><br><br>
+        ENTER STUDENT MOBILE NUMBER :<input type="number" name="sm"> <br><br>
+        <input type="submit" value="UPDATE">
+        <h3>{{r}}</h3>
+    </form>
+</body>
